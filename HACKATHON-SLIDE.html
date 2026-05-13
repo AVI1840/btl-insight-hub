@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+<meta charset="utf-8">
+<title>מצפן התובנות — קווליפיקציה להאקתון AI</title>
+<style>
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0;
+  color: #1a2332;
+  background: #ffffff;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, #1a2e4a 0%, #1e3a5f 100%);
+  padding: 40px 50px 35px;
+  color: white;
+  text-align: center;
+}
+.header h1 {
+  font-size: 32px;
+  font-weight: 800;
+  margin: 0 0 6px;
+}
+.header .subtitle {
+  font-size: 14px;
+  color: rgba(255,255,255,0.7);
+  margin: 0 0 4px;
+}
+.header .org {
+  font-size: 12px;
+  color: rgba(255,255,255,0.5);
+}
+
+/* Content */
+.content {
+  padding: 30px 50px 40px;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+  font-size: 13px;
+}
+thead th {
+  background: #1e3a5f;
+  color: white;
+  padding: 12px 16px;
+  text-align: right;
+  font-weight: 600;
+  font-size: 12px;
+}
+thead th:first-child {
+  width: 40px;
+  text-align: center;
+}
+thead th:nth-child(2) {
+  width: 140px;
+}
+tbody td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e8ecf0;
+  vertical-align: top;
+  line-height: 1.7;
+}
+tbody tr:nth-child(even) {
+  background: #f8f9fb;
+}
+tbody td:first-child {
+  text-align: center;
+  font-weight: 700;
+  color: #1e3a5f;
+}
+tbody td:nth-child(2) {
+  font-weight: 600;
+  color: #1e3a5f;
+}
+
+/* Footer */
+.footer {
+  background: #1e3a5f;
+  color: rgba(255,255,255,0.6);
+  text-align: center;
+  padding: 12px;
+  font-size: 11px;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>מצפן התובנות — קווליפיקציה</h1>
+  <p class="subtitle">הפיכת 10 מיליון פניות אילמות למודיעין אסטרטגי</p>
+  <p class="org">ביטוח לאומי | שאלות ותשובות עיקריות</p>
+</div>
+
+<div class="content">
+<table>
+<thead>
+<tr>
+  <th>#</th>
+  <th>שאלה</th>
+  <th>תשובה</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td>הבעיה העסקית</td>
+  <td>ביטוח לאומי מטפל ב-10 מיליון פניות בשנה (5.6M שיחות, 4.2M מפ"צים, 2.1M קשב). ההנהלה רואה מדדים כמותיים — אך עיוורת לתוכן: למה פונים, מה כואב, אילו תהליכים שבורים. התוצאה: כשלים מערכתיים לא מזוהים, פניות חוזרות (14-17%), אזרחים שנופלים בין הכיסאות.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td>הערך לארגון</td>
+  <td>מעבר מניהול תגובתי ("כיבוי שריפות") ליוזמה פרואקטיבית מבוססת נתונים. זיהוי כשלים שורשיים לפני שהם מחריפים. צמצום 10% בהיקף הפניות. חיסכון בזמן הנהלה. שיפור חוויית האזרח — SLA של איכות, לא רק של זמן.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td>הרכב צוות ומחויבות</td>
+  <td>צוות מנוסה בפיתוח AI ו-NLP בסביבה ממשלתית. ניסיון ישיר עם מאגרי פניות ביטוח לאומי. נציג עסקי מעורב ומחויב. כבר קיים דמו עובד + דוח תובנות ראשון על נתונים אמיתיים.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td>סיכונים / אתגרים</td>
+  <td>גישה ל-Verint להרחבה — נדרש אישור אבטחת מידע. תלות בשיתוף פעולה עם אגפים (אושר שותף עסקי מחויב). סטנדרטיזציה של מבנה פניות בין מקורות. רגישות המידע — עבודה בסביבה מבוקרת בלבד.</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td>ספונסר עסקי</td>
+  <td>נציג עסקי בכיר מחויב לפתרון ולהטמעה.</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td>מערכת עצמאית?</td>
+  <td>כן. מערכת עצמאית לחלוטין — read-only מהדאטה, לא דורשת שינוי מערכות ליבה (CRM, מוקד). מתחברת, מעבדת, מפיקה תוצרים.</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td>מורכבות הפתרון</td>
+  <td>פתרון מותאם מקצה לקצה: Pipeline לעיבוד מידע לא מובנה (טקסט + קול), מנוע ניתוח AI (סנטימנט, אשכולות, כשלים שורשיים), שכבת תוצר (דוח מנהלים + פלטפורמת תחקור). קיים כבר דמו עובד + דוח ראשון.</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td>ניסיון הצוות</td>
+  <td>צוות מנוסה — כבר ביצע ניתוח מלא על 8,600+ פניות אמיתיות, הפיק דוח תובנות ברמת מנהלים, ובנה פלטפורמה אונליין עובדת. ניסיון עם Verint, NLP בעברית, מודלי AI מתקדמים.</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td>בשלות הארגון</td>
+  <td>גבוהה. גישה מאובטחת קיימת. ספונסר עסקי מאושר. דמו עובד. דוח ראשון הוצג. הפרויקט בשלב הרחבה מפיילוט לשיטה.</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td>גישה לדאטא</td>
+  <td>קיימת גישה מאובטחת למאגר פניות (מפ"צים). האתגר: הרחבה לקש"ב (שיחות). אין חסמים רגולטוריים — סביבה פנימית מבוקרת ללא חשיפה לאזרח.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="footer">
+  מצפן התובנות | ביטוח לאומי | קווליפיקציה להאקתון AI
+</div>
+
+</body>
+</html>
