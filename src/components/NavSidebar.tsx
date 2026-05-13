@@ -1,14 +1,16 @@
-import { LayoutDashboard, FileText, TrendingUp, MessageSquare, Bell, Settings, HelpCircle, Sparkles } from 'lucide-react'
+import { LayoutDashboard, FileText, TrendingUp, MessageSquare, Bell, Settings, HelpCircle, Sparkles, Cloud, Award } from 'lucide-react'
 import { alerts } from '@/data/alerts'
 
 interface Props { activeNav: string; onNavChange: (id: string) => void }
 
 const navItems = [
   { id: 'dashboard', icon: LayoutDashboard, label: 'תמונת מצב' },
+  { id: 'quality', icon: Award, label: 'איכות שירות' },
   { id: 'reports', icon: FileText, label: 'דוחות' },
   { id: 'analytics', icon: TrendingUp, label: 'תובנות מגמות' },
   { id: 'queries', icon: MessageSquare, label: 'שאלות ותובנות AI' },
   { id: 'alerts', icon: Bell, label: 'התרעות' },
+  { id: 'architecture', icon: Cloud, label: 'ארכיטקטורה AWS' },
 ]
 
 export function NavSidebar({ activeNav, onNavChange }: Props) {

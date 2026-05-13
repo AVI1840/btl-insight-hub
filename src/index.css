@@ -24,7 +24,11 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; font-size: 16px; }
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  overflow-x: hidden;
+}
 
 body {
   font-family: var(--font-family-heebo);
@@ -33,7 +37,94 @@ body {
   direction: rtl;
   overflow-x: hidden;
   min-height: 100vh;
+  width: 100%;
+  max-width: 100vw;
   -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Lock viewport — no horizontal scroll */
+#root {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+  position: relative;
+}
+
+/* ═══ MOBILE RESPONSIVE OVERRIDES ═══ */
+@media (max-width: 768px) {
+  /* Force all grids to single column on mobile */
+  [style*="gridTemplateColumns"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Content takes full width */
+  main {
+    padding: 14px 10px 60px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Remove max-width constraints */
+  main > div {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  /* Cards — reduce padding, full width */
+  .card-premium {
+    padding: 14px !important;
+    width: 100% !important;
+  }
+
+  /* Hide decorative dividers */
+  [style*="width: '1px'"],
+  [style*="width:'1px'"] {
+    display: none !important;
+  }
+
+  /* Prevent any element from causing overflow */
+  * {
+    max-width: 100%;
+  }
+
+  img, svg, video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Ensure text doesn't overflow */
+  p, span, h1, h2, h3, h4, button {
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Topic tabs — horizontal scroll, no scrollbar */
+  .flex.overflow-x-auto {
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+  }
+  .flex.overflow-x-auto::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Disable horizontal touch-scroll on body */
+  body {
+    overscroll-behavior-x: none;
+    touch-action: pan-y;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-cols-2 {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Even tighter padding on very small screens */
+  main {
+    padding: 10px 8px 60px !important;
+  }
 }
 
 :focus-visible {
@@ -82,6 +173,11 @@ body {
 @keyframes slideDown {
   from { opacity: 0; max-height: 0; }
   to { opacity: 1; max-height: 300px; }
+}
+
+@keyframes alertSlideIn {
+  from { opacity: 0; transform: translate(-50%, -20px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
 }
 
 @keyframes gradientShift {
