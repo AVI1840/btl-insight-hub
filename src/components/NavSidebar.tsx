@@ -7,7 +7,7 @@ const navItems = [
   { id: 'dashboard', icon: LayoutDashboard, label: 'תמונת מצב' },
   { id: 'reports', icon: FileText, label: 'דוחות' },
   { id: 'analytics', icon: TrendingUp, label: 'תובנות מגמות' },
-  { id: 'queries', icon: MessageSquare, label: 'שאלות ותובנות' },
+  { id: 'queries', icon: MessageSquare, label: 'שאלות ותובנות AI' },
   { id: 'alerts', icon: Bell, label: 'התרעות' },
 ]
 
@@ -41,20 +41,13 @@ export function NavSidebar({ activeNav, onNavChange }: Props) {
               key={item.id}
               onClick={() => onNavChange(item.id)}
               aria-current={active ? 'page' : undefined}
-              className="w-full flex items-center gap-2.5 rounded-lg text-[12px] mb-0.5 relative transition-all"
+              className={`w-full flex items-center gap-2.5 rounded-lg text-[12px] mb-0.5 relative transition-all nav-item${active ? ' nav-item--active' : ''}`}
               style={{
                 padding: '10px 14px',
                 color: active ? '#ffffff' : 'rgba(148,163,184,0.8)',
                 background: active ? 'rgba(26,111,181,0.18)' : 'transparent',
                 fontWeight: active ? 600 : 400,
                 borderInlineStart: active ? '3px solid #4fc3f7' : '3px solid transparent',
-                boxShadow: active ? '0 0 20px rgba(79,195,247,0.06)' : 'none',
-              }}
-              onMouseEnter={e => {
-                if (!active) (e.currentTarget as HTMLElement).style.background = 'rgba(255,255,255,0.04)'
-              }}
-              onMouseLeave={e => {
-                if (!active) (e.currentTarget as HTMLElement).style.background = 'transparent'
               }}
             >
               <item.icon
@@ -80,18 +73,12 @@ export function NavSidebar({ activeNav, onNavChange }: Props) {
 
       {/* Bottom */}
       <div style={{ padding: '14px 18px 18px' }}>
-        <button className="flex items-center gap-2 text-[10px] mb-2.5 w-full rounded-md transition-colors"
-          style={{ color: 'rgba(148,163,184,0.55)', padding: '6px 8px' }}
-          onMouseEnter={e => (e.currentTarget as HTMLElement).style.background = 'rgba(255,255,255,0.04)'}
-          onMouseLeave={e => (e.currentTarget as HTMLElement).style.background = 'transparent'}
-        >
+        <button className="nav-item flex items-center gap-2 text-[10px] mb-2.5 w-full rounded-md transition-colors"
+          style={{ color: 'rgba(148,163,184,0.55)', padding: '6px 8px' }}>
           <Settings className="w-3.5 h-3.5" /> הגדרות
         </button>
-        <button className="flex items-center gap-2 text-[10px] w-full rounded-md transition-colors"
-          style={{ color: 'rgba(148,163,184,0.55)', padding: '6px 8px' }}
-          onMouseEnter={e => (e.currentTarget as HTMLElement).style.background = 'rgba(255,255,255,0.04)'}
-          onMouseLeave={e => (e.currentTarget as HTMLElement).style.background = 'transparent'}
-        >
+        <button className="nav-item flex items-center gap-2 text-[10px] w-full rounded-md transition-colors"
+          style={{ color: 'rgba(148,163,184,0.55)', padding: '6px 8px' }}>
           <HelpCircle className="w-3.5 h-3.5" /> עזרה
         </button>
         <p className="text-[8px] mt-3" style={{ color: 'rgba(148,163,184,0.3)' }}>
