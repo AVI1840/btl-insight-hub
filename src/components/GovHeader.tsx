@@ -324,27 +324,27 @@ export function GovHeader() {
               <span className="text-[10px] font-medium" style={{ color: '#4fc3f7' }}>סיכום AI מוכן</span>
             </button>
 
-            {/* ★ Schedule Alert Button */}
+            {/* ★ Schedule Alert Button — prominent orange accent */}
             <button
               onClick={() => setShowSchedule(true)}
               className="flex items-center gap-1.5 rounded-lg transition-all"
               style={{
-                padding: '7px 13px',
-                background: 'rgba(255,255,255,0.05)',
-                border: '1px solid rgba(255,255,255,0.1)',
+                padding: '7px 14px',
+                background: 'rgba(230,126,34,0.15)',
+                border: '1px solid rgba(230,126,34,0.4)',
               }}
               onMouseEnter={e => {
-                (e.currentTarget as HTMLElement).style.background = 'rgba(255,255,255,0.1)'
-                ;(e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.2)'
+                (e.currentTarget as HTMLElement).style.background = 'rgba(230,126,34,0.25)'
+                ;(e.currentTarget as HTMLElement).style.borderColor = 'rgba(230,126,34,0.6)'
               }}
               onMouseLeave={e => {
-                (e.currentTarget as HTMLElement).style.background = 'rgba(255,255,255,0.05)'
-                ;(e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.1)'
+                (e.currentTarget as HTMLElement).style.background = 'rgba(230,126,34,0.15)'
+                ;(e.currentTarget as HTMLElement).style.borderColor = 'rgba(230,126,34,0.4)'
               }}
               title="תזמן התרעה"
             >
-              <CalendarClock className="w-3.5 h-3.5" style={{ color: 'rgba(255,255,255,0.7)' }} />
-              <span className="text-[10px] font-medium" style={{ color: 'rgba(255,255,255,0.7)' }}>תזמון התרעות</span>
+              <CalendarClock className="w-3.5 h-3.5" style={{ color: '#f0a04b' }} />
+              <span className="text-[10px] font-semibold" style={{ color: '#f0a04b' }}>תזמון התרעות</span>
             </button>
 
             {/* Search */}
